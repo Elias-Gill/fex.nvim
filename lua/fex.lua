@@ -377,7 +377,7 @@ M.open = function(path, options)
 			keys = "q",
 			desc = "Quit",
 			func = function()
-				vim.cmd("q")
+				vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-o>", true, true, true), "n", true)
 			end,
 		},
 		{
